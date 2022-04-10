@@ -106,7 +106,7 @@ describe("Cadastramento de pets", () => {
     });
 
     it("Cadastrar - campo 'sexo' deve ser 'M' ou 'F'", () => {
-        pet = { nome: "Zeus", idade: -5, sexo: 'Masculino', especie: 'cachorro'};
+        pet = { nome: "Zeus", idade: 5, sexo: 'Masculino', especie: 'cachorro'};
         expect(pets.cadastrar(pet)).toEqual(
             expect.objectContaining({
                 erro: true,
@@ -162,7 +162,7 @@ describe("Edição de pets por id", () => {
     });
 
     it("Editar - campo 'sexo' deve ser 'M' ou 'F'", () => {
-        pet = { nome: "Zeus", idade: -5, sexo: 'Masculino', especie: 'cachorro'};
+        pet = { nome: "Zeus", idade: 5, sexo: 'Masculino', especie: 'cachorro'};
         expect(pets.editarPorId(1, pet)).toEqual(
             expect.objectContaining({
                 erro: true,
